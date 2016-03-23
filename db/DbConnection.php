@@ -5,9 +5,9 @@
     include($_SERVER['DOCUMENT_ROOT']."/Settings.php");
 	
 	$dbhost = 'localhost';
-	$dbname = 'dbdata';	
+	$dbname = 'dboyvent';
 	$dbuser = 'root';
-	$dbpass = 'Memo3480$';
+	$dbpass = 'kmp3480$';
 	
 	if(!isset($conn))
     	$conn = mysql_connect($dbhost, $dbuser,$dbpass);

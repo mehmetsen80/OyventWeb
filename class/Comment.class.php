@@ -24,7 +24,7 @@ class Comment{
 		if(isset($commentID)){
 			$this->pkCommentID = $commentID;
 			
-			$query = "SELECT PKCOMMENTID, FKPHOTOID, FKUSERID, COMMENT, LATITUDE, LONGITUDE POSTDATE FROM TBLCOMMENT 
+			$query = "SELECT PKCOMMENTID, FKPHOTOID, FKUSERID, COMMENT, LATITUDE, LONGITUDE, POSTDATE FROM TBLCOMMENT
 			WHERE PKCOMMENTID = '".$commentID."' ";
 			$result = executeQuery($query);			
 				

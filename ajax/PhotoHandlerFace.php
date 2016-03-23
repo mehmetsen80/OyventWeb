@@ -201,7 +201,7 @@ require_once($_SERVER['DOCUMENT_ROOT']."/Tools.php");
 			$this->httpPath = $this->httpPath.$picnewname.'_Thumb2.'.strtolower($ext);*/
 		
 		
-			$bucket = "s3-oy-vent-images-14";			
+			$bucket = "s3-oy-vent-images-16";
 			$foldername = isset($this->userID)?$this->userID:"common";			
 			$keyprefix = UUID::generate(UUID::UUID_RANDOM, UUID::FMT_STRING,"13418297");			
 			$keyprefix = str_replace("-","",$keyprefix);

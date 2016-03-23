@@ -159,7 +159,7 @@ return;*/
 			
 			
 			//$tempFile = $this->file;
-			$bucket = "s3-oy-vent-images-14";			
+			$bucket = "s3-oy-vent-images-16";
 			$foldername = isset($this->userID)?$this->userID:"common";			
 			$keyprefix = UUID::generate(UUID::UUID_RANDOM, UUID::FMT_STRING,"96527393");			
 			$keyprefix = str_replace("-","",$keyprefix);
@@ -311,7 +311,7 @@ return;*/
 				//$captiontext = stripslashes($captiontext);			
 				
 			
-				$bucket = "s3-oy-vent-images-14";			
+				$bucket = "s3-oy-vent-images-16";
 				$foldername = isset($this->userID)?$this->userID:"common";			
 				$keyprefix = UUID::generate(UUID::UUID_RANDOM, UUID::FMT_STRING,"96581783");			
 				$keyprefix = str_replace("-","",$keyprefix);

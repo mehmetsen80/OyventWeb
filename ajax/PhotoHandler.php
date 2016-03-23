@@ -190,7 +190,7 @@ require_once($_SERVER['DOCUMENT_ROOT']."/class/Album.class.php");
 			}				
 					
 		
-			$bucket = "s3-oy-vent-images-14";
+			$bucket = "s3-oy-vent-images-16";
 			//$foldername = $this->userID;
 			$foldername = isset($this->userID)?$this->userID:"common";			
 			$keyprefix = UUID::generate(UUID::UUID_RANDOM, UUID::FMT_STRING,"92987943");			
