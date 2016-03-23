@@ -6,8 +6,8 @@
 	
 	$dbhost = 'localhost';
 	$dbname = 'dboyvent';
-	$dbuser = 'root';
-	$dbpass = 'kmp3480$';
+	$dbuser = 'kmpusr';
+	$dbpass = 'kmp3480#';
 	
 	if(!isset($conn))
     	$conn = mysql_connect($dbhost, $dbuser,$dbpass);
