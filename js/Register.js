@@ -13,8 +13,8 @@ function signUpUser()
   $("#btnCreate").attr("disabled", "true");
   $("#divSignUpMessage").html('<img src="/images/ajax-loader.gif" >');
   
-  var info = encodeURI("nocache="+Math.random()+"&processType=SIGNUPUSERVIAWEB&fullname="+fullname+"&email="+email+"&password="+password);
-	  var uri = encodeURI("/ajax/Register.php");
+  	var info = encodeURI("nocache="+Math.random()+"&processType=SIGNUPUSERVIAWEB&fullname="+fullname+"&email="+email+"&password="+password);
+	var uri = encodeURI("/ajax/Register.php");
      
   	  $.ajax({
   		  type: "GET",

@@ -45,12 +45,13 @@
 	$password = utf8_urldecode($password);
 	$password = real_escape_string($password);
 	
-	//$result = array("success"=>true,"message" => $fullname);
-	
-	$isWeb = true;
- 	$register = new Register();
- 	$result = $register->signupUser($fullname,$email,'',$password,$isWeb); 	
- 	echo json_encode($result);	 	
+	$result = array("success"=>true,"message" => $fullname);
+	echo json_encode($result);
+
+//	$isWeb = true;
+// 	$register = new Register();
+// 	$result = $register->signupUser($fullname,$email,'',$password,$isWeb);
+// 	echo json_encode($result);
  }
  
  function signupUser()

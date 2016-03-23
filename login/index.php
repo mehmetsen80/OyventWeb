@@ -104,7 +104,7 @@ else if($region == "NY")
                         <div class="panel">
                             <h4>Sign Up</h4>
                             
-                                <input type="text" name="fullname" id="txtFullName" name="txtFullName" onFocus="checkFullName();"  onKeyUp="checkFullName()" placeholder="Full Name"><br>
+                                <input type="text" name="fullname" id="txtFullName" name="txtFullName"  placeholder="Full Name"><br>
                                 <input type="text" name="txtEmail2" id="txtEmail2" onFocus="validateEmailSignUpUser()"  onKeyUp="validateEmailSignUpUser()" placeholder="Email"><br>
                                 <input type="password" name="txtPassword2" onKeyPress="fireRegisterUser(event)"  id="txtPassword2"   placeholder="Password"><br>
                                 <a href='/Terms.php' style='font-size:12px;' class='download' >Terms & Conditions</a>
