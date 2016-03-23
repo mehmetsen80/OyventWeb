@@ -52,7 +52,7 @@ class Register {
 	     VALUES ('".$userUUID."','".$fullname."','".$email."','".$username."','".$password."','".$_SERVER['REMOTE_ADDR']."','".$_SERVER['REMOTE_ADDR']."','".$firstlogindate."','".$firstlogindate."','".$firstlogindate."')";
 		 
 		
-     //return array("success" => false, "message" => $query);
+        return array("success" => false, "message" => $query);
 	 	try{		
 			beginTrans(); // transaction begins
 			
