@@ -26,11 +26,16 @@ function signUpUser()
 				$("#btnCreate").removeAttr('disabled');
 				//$("#divSignUpMessage").html('');
 				//alert("success:"+data.success+"  message:"+data.message);				
-								
-				if(data.success)								
-					window.location = "/admin/";
-				else						  			
-		  			$("#divSignUpMessage").html(data.message);								  			
+
+
+				if(data.success){
+					//window.location = "/admin/";
+					alert(data.message);
+				}
+
+				else{
+					$('#divSignUpMessage').html(data.message);
+				}
   			}
 		});  
 } 

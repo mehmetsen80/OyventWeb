@@ -30,8 +30,8 @@ function loginUser()
 			
 			
 			if(data.success){
-				//window.location = "/admin/";
-				alert(data.message);
+				window.location = "/admin/";
+				//alert(data.message);
 			}
 
 			else{
