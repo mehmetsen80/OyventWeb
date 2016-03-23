@@ -1,0 +1,22 @@
+.btn{
+	font-weight:bold;
+	font-family:'Roboto', sans-serif;
+}
+.btn-primary{
+	background-color:$main;
+	&:hover{
+		background-color:$second;
+	}
+}
+.btn-default{
+	color:$main;
+	&:hover{
+		color:$main;
+	}
+}
+
+@media (max-width:767px){
+	.row div + div{
+		margin-top:25px;
+	}
+}

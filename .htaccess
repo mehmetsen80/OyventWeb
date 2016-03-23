@@ -1,0 +1,7 @@
+RewriteEngine on
+RewriteRule ^([a-zA-Z0-9_\-]+)/?([a-zA-Z0-9_\-]+)?$ /admin/album.php?usr=$1&sbj=$2
+
+RewriteEngine on
+Options +FollowSymlinks
+RewriteCond %{HTTP_HOST} ^www.([^\.]+\.[^\.]+)$
+RewriteRule ^(.*)$ http://%1/$1/$2 [R=301,L]
