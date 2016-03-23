@@ -1,10 +1,12 @@
 <?php
+
 /**
  * Created by PhpStorm.
  * User: msen
  * Date: 3/23/16
- * Time: 5:26 PM
+ * Time: 5:34 PM
  */
+
 
 
 require_once(dirname(dirname(__FILE__)) . '/lib/PhpMailer/PHPMailerAutoload.php');
@@ -14,7 +16,6 @@ use PHPMailer as PHPMailerClass;
 class Mailer
 {
     function __construct() {
-
 
     }
 
@@ -43,5 +44,6 @@ class Mailer
 
     }
 }
+
 
 ?>
