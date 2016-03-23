@@ -16,7 +16,7 @@ class Register {
   	{  		
 		include($_SERVER['DOCUMENT_ROOT']."/Settings.php");
 		require_once($_SERVER['DOCUMENT_ROOT']."/Tools.php");	
-		include($_SERVER['DOCUMENT_ROOT']."/lib/PhpMailer/PHPMailerAutoload.php");
+		//include($_SERVER['DOCUMENT_ROOT']."/lib/PhpMailer/PHPMailerAutoload.php");
 			
 		/*first check out the fields*/
 		
