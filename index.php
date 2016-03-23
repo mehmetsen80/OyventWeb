@@ -39,7 +39,7 @@ if (isset($_SESSION['userObject']) & !empty($_SESSION['userObject']))
 	
 
 //if (isset($_SESSION['userObject']) && !empty($_SESSION['userObject']))
-	header("Location: /mobile/"); 
+	//header("Location: /mobile/");
 
 ?>
 <!DOCTYPE html>
