@@ -29,10 +29,15 @@ function loginUser()
 			//alert("success:"+data.success+"  message:"+data.message);		
 			
 			
-			if(data.success)
-				window.location = "/admin/";
-			else
+			if(data.success){
+				//window.location = "/admin/";
+				alert(data.message);
+			}
+
+			else{
 				$('#divLoginMessage').html(data.message);
+			}
+
 			
 			
   			/*data = eval("("+ data +")"); //Parse JSON				
