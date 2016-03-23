@@ -29,10 +29,8 @@ function signUpUser()
 
 
 				if(data.success){
-					//window.location = "/admin/";
-					alert(data.message);
+					window.location = "/admin/";
 				}
-
 				else{
 					$('#divSignUpMessage').html(data.message);
 				}
