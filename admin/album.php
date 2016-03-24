@@ -10,7 +10,7 @@ require_once($_SERVER['DOCUMENT_ROOT']."/Tools.php");
 
 $albumID = $_GET["albumID"]; 
 $username = $_GET["usr"];
-$subjectID = $_GET["sbj"];
+$subjectID = $_GET["subjectID"];
 
 echo $username.' '.$subjectID;
 
