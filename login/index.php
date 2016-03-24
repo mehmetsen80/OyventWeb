@@ -88,7 +88,7 @@ else if($region == "NY")
                         <h3 style='font-size:22px;font-weight:normal;'>As photos flow social media, we help you to store your photos in one place. With Oyvent, you can view, import and share trending community photos.
 </h3><br>
                         <h2><b><u>Album is now social <?php //echo $album; ?></u></b></h2>
-                        <h3 style='font-size:22px;font-weight:normal;'>Oyvent allows you to add and view posts based on interests, and then group them together in a specific community. You can also filter best rated photos and learn what community members think about your post.</h3>
+                        <h3 style='font-size:22px;font-weight:normal;'>Oyvent allows you to add and view posts based on interests, and then group them together in a specific album. You can also filter best rated photos and learn how community members response to your post.</h3>
                         <a href="/Explore.php" class="btn btn-default btn-lg">Explore</a>
                     </div>
                     <div class="col-sm-4">
