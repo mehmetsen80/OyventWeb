@@ -125,7 +125,12 @@ if(isset($userObject) && !$userObject->isAdmin && $_SERVER['REQUEST_URI'] != '/a
                 <!--<li><a href="/admin/myalbums.php"><i class="icon_folder-alt"></i> My Albums</a></li>-->             				
 				
 			</ul>
-            
+
+			<h3>Admin</h3>
+			<ul>
+				<li><a href="/admin/"><i class="icon_box-selected"></i> Admin Home</a></li>
+
+			</ul>
             
             <h3>Live Hashtags</h3>
             <ul>
