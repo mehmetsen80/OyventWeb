@@ -564,7 +564,7 @@ margin-left:5px;
 }
 .album:hover{cursor:pointer;  border-color:#0000ff; background:#069;}
 .album:hover  span{color:#ffffff;}
-.album span{font-weight:bold; font-size:16px;  vertical-align:middle; margin-top:6px;  color:#00507d; display:inline-block; width:100%; padding-bottom::80px; position:relative;}
+.album span{font-weight:bold; font-size:16px;  vertical-align:middle; margin-top:6px; text-align: center; color:#00507d; display:inline-block; width:100%; padding-bottom::80px; position:relative;}
 .album h3{color:#000; vertical-align:bottom;}
 
 .thumbs{margin-left:10px; border-style:none; padding:10px; padding-left:5px; float:left;}
