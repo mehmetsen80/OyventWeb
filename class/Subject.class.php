@@ -13,7 +13,7 @@ class Subject{
 	function __construct($pkSubjectID=NULL){
 		
 		if(isset($pkSubjectID)){
-			$this->pkSubjectID = pkSubjectID;		
+			$this->pkSubjectID = $pkSubjectID;
 			$query = "SELECT PKSUBJECTID,FKALBUMID,TITLE,POSTDATE,PRIVACY 
 			FROM TBLSUBJECT WHERE PKSUBJECTID=".$pkSubjectID;
 			$result = executeQuery($query);			
