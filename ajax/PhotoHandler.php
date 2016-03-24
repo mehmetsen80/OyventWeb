@@ -207,7 +207,7 @@ require_once($_SERVER['DOCUMENT_ROOT']."/class/Album.class.php");
 
 			$newfilelarge = '/tmp/'.$keylarge.'.jpg';				
 			$piclarge->save($newfilelarge,75,0777);
-			return array('success'	=>	false, 'error' => 'keylarge: '.$keylarge);
+			return array('success'	=>	false, 'error' => 'keylarge: '.$keylarge.' folder: '.$foldername.' newfilelarge: '.$newfilelarge);
 			$resultlarge = createObject($foldername, $keylarge, $newfilelarge);
 			return array('success'	=>	false, 'error' => 'largeurl3: '.$this->largeurl);
 			$URLLARGE = $resultlarge['ObjectURL'];
