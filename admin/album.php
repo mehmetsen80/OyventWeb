@@ -172,7 +172,7 @@ if((!isset($username) || empty($username)) && isset($albumID)){
                    
                   <div  class="center" >  
                   
-                  <div class="left" ><h2><?php echo "$album->albumName" ?></h2></div>                         
+                    <h1><?php echo "$album->albumName" ?></h1>
                    
                 	 <div  class="right" style='margin:5px; width:100%;clear:both;'> 
                      <a href="/admin/add.php?albumID=<?php echo "$albumID" ?>"  class="btnred" title="Add Content" alt="Add Content"  ><i class="icon_plus"></i> Add Post</a> 
