@@ -49,7 +49,9 @@ else
 $geo =  unserialize(file_get_contents("http://www.geoplugin.net/php.gp?ip=".$_SERVER['REMOTE_ADDR']));	
 $latitude = $geo["geoplugin_latitude"];
 $longitude = $geo["geoplugin_longitude"];	
-	
+
+//go to nau be default   TO DO: get later the person's default album or list
+header("Location: /admin/album.php?albumID=1");
 
 ?>
 <!DOCTYPE html>

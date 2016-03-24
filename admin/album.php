@@ -148,13 +148,13 @@ if((!isset($username) || empty($username)) && isset($albumID)){
 <?php if(isset($albumID)){ ?>
 
 
-<?php //include("menu.php"); ?>
+<?php include("menu.php"); ?>
         
-        <div class="maincontainer">
+        <div class="container">
 
 			<div class="main">
 
-                <?php include("../header.php"); ?>
+                <?php //include("../header.php"); ?>
 
 				<section id="contentArea"><!-- This is where all the content goes -->
               
