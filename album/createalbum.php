@@ -38,8 +38,6 @@ if(isset($albumID)){
 <input type="hidden" id="txtUserID" value="<?php echo $userObject->userID ?>" >
 <input type="hidden" id="txtAlbumID" value="<?php echo $albumID ?>" >
 
-
-<?php include("menu.php"); ?>
         
         <div class="container">
 			
