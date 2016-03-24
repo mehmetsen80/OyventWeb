@@ -220,11 +220,11 @@ $picUUID = strlen($picUUID)>=16?substr($picUUID,0,16):$picUUID;
 
 
                             <h1><?php echo $album->albumName ?></h1>
-                            <!--<div id="map" style="width: 100%; height: 360px"></div>-->
+
 
 
                             <?php
-                            $thumbs = $album->getLatestPhotoThumbs(66);
+                            /*$thumbs = $album->getLatestPhotoThumbs(66);
                             $strthumbs = "";
                             $stralbums = "";
                             foreach($thumbs as $thumb){
@@ -238,9 +238,7 @@ $picUUID = strlen($picUUID)>=16?substr($picUUID,0,16):$picUUID;
 
 							</div></a>";
 
-                            //<span>".$album->albumName."<br>".$strthumbs."<br></span>
-
-                            echo $stralbums;
+                            echo $stralbums;*/
                             ?>
                         </div>
 
