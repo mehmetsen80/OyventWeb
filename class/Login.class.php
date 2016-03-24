@@ -69,7 +69,7 @@ class Login {
 				$query = "UPDATE TBLUSER SET ISACTIVE='1', ISDEACTIVATED='0', LASTLOGINDATE=NOW(), 
 				LASTINIP='".$_SERVER['REMOTE_ADDR']."'  WHERE PKUSERID ='".$userObject->userID."' ";
 
-                return array("success" => false, "message" => $query);
+                //return array("success" => false, "message" => $query);
 
 				$result = executeQuery($query);				
 				
