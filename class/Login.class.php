@@ -40,7 +40,7 @@ class Login {
  		{     
      		$row = mysql_fetch_array($result); //fetch the row for furhter checkup
 
-            return array("success" => false, "message" => $query);
+
 
 			$userObject = new UserInfo();
 	 		$userObject->userID =  doubleval($row["PKUSERID"]);
@@ -67,7 +67,10 @@ class Login {
 	 		else // if user active
 	 		{								
 				$query = "UPDATE TBLUSER SET ISACTIVE='1', ISDEACTIVATED='0', LASTLOGINDATE=NOW(), 
-				LASTINIP='".$_SERVER['REMOTE_ADDR']."'  WHERE PKUSERID ='".$userObject->userID."' ";			
+				LASTINIP='".$_SERVER['REMOTE_ADDR']."'  WHERE PKUSERID ='".$userObject->userID."' ";
+
+                return array("success" => false, "message" => $query);
+
 				$result = executeQuery($query);				
 				
 				@session_start();
