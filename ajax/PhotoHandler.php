@@ -205,9 +205,8 @@ require_once($_SERVER['DOCUMENT_ROOT']."/class/Album.class.php");
 			$piclarge->load($this->largeurl,strtoupper($ext));		
 			$width = $piclarge->getWidth() > 720?720:$piclarge->getWidth();					
 			$piclarge->resizeToWidth($width);
-
 			$newfilelarge = '/tmp/'.$keylarge.'.jpg';				
-			$piclarge->save($newfilelarge,75,0777);
+			$piclarge->save($newfilelarge,90,0777);
 			$resultlarge = createObject($foldername, $keylarge, $newfilelarge);
 			$URLLARGE = $resultlarge['ObjectURL'];
 			$piclarge_size = $piclarge->getFileSize();			      
@@ -219,13 +218,10 @@ require_once($_SERVER['DOCUMENT_ROOT']."/class/Album.class.php");
 		
 			//medium picture
 			$keymedium = $keyprefix.'-medium.jpg';
-			$picmedium = new Picture();						
-			$picmedium->load($this->largeurl, strtoupper($ext));					
-			$width = $picmedium->getWidth();
-			if($width >= 250)		
-				$picmedium->resize(250,250);
-			else
-				$picmedium->resizeToWidth($width);			
+			$picmedium = new Picture();
+			$picmedium->load($this->largeurl, strtoupper($ext));
+			$width = $piclarge->getWidth() > 250?250:$picmedium->getWidth();
+			$picmedium->resizeToWidth($width);
 			$newfilemedium = '/tmp/'.$keymedium.'.jpg';	
 			$picmedium->save($newfilemedium,75,0777);			
 			$resultmedium = createObject($foldername, $keymedium, $newfilemedium);			
@@ -240,8 +236,9 @@ require_once($_SERVER['DOCUMENT_ROOT']."/class/Album.class.php");
 			//small picture
 			$keysmall = $keyprefix.'-small.jpg';
 			$picsmall = new Picture();				
-			$picsmall->load($this->largeurl, strtoupper($ext));			
-			$picsmall->resize(150,150); //let's accept all the smalls as 150x150
+			$picsmall->load($this->largeurl, strtoupper($ext));
+			$width = $piclarge->getWidth() > 150?150:$picsmall->getWidth();
+			$picsmall->resizeToWidth($width);
 			$newfilesmall = '/tmp/'.$keysmall.'.jpg';				
 			$picsmall->save($newfilesmall,75,0777);			
 			$resultsmall = createObject($foldername, $keysmall, $newfilesmall);
