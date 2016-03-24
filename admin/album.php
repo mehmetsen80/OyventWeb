@@ -169,12 +169,12 @@ if((!isset($username) || empty($username)) && isset($albumID)){
                 	</div>
                 
                 <div class="grid">
-                   
-                  <div  class="center" >  
+
+                    <!--<div  class="center" >
                   
                     <h1><?php echo "$album->albumName" ?></h1>
 
-                      <!--<div  class="right" style='margin:5px; width:100%;clear:both;'>
+                      <div  class="right" style='margin:5px; width:100%;clear:both;'>
                      <?php  if(isset($userObject) && ($album->albumUserID == $userObject->userID)){ ?>
                      <a  class="btnred" title="Delete Album" alt="Delete Album"  onClick="deleteAlbum()" ><i class="icon_trash_alt"></i> Delete</a> <a class='btnred' title="Edit Album" alt="Edit Album" href='/admin/createalbum.php?albumID=<?php echo $albumID ?>'><i class="icon_pencil-edit"></i> Edit</a>
                      <?php } ?>
