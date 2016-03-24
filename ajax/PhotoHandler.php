@@ -204,7 +204,7 @@ require_once($_SERVER['DOCUMENT_ROOT']."/class/Album.class.php");
 			$piclarge->load($this->largeurl,strtoupper($ext));		
 			$width = $piclarge->getWidth() > 720?720:$piclarge->getWidth();					
 			$piclarge->resizeToWidth($width);
-			return array('success'	=>	false, 'error' => 'largeurl: '.$this->largeurl);
+			return array('success'	=>	false, 'error' => 'largeurl2: '.$this->largeurl);
 			$newfilelarge = '/tmp/'.$keylarge.'.jpg';				
 			$piclarge->save($newfilelarge,75,0777);			
 			$resultlarge = createObject($foldername, $keylarge, $newfilelarge);
