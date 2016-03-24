@@ -1,4 +1,94 @@
- <div style="width:100%; clear:both;">
+<?php
+
+require_once $_SERVER['DOCUMENT_ROOT'].'/class/Mobile.Detect.class.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/class/Track.class.php';
+require_once($_SERVER['DOCUMENT_ROOT']."/class/UserInfo.class.php");
+
+
+
+
+@session_start();
+$timezone = stripslashes($_SESSION['usertimezone']);
+$timezone = str_replace('"',"",$timezone);
+
+$userObject = $_SESSION['userObject'];
+
+
+// Your default site layouts.
+// Update this array if you have fewer layout types.
+function layoutTypes()
+{
+    return array('classic', 'mobile', 'tablet');
+}
+
+function OSTypes()
+{
+    return array('','','');
+}
+
+function initLayoutType()
+{
+    // Safety check.
+
+    if(empty($_SESSION['layoutType']) || empty($_SESSION["userAgent"])){
+
+        if (!class_exists('Mobile_Detect')) { return 'classic'; }
+
+        $detect = new Mobile_Detect;
+        $isMobile = $detect->isMobile();
+        $isTablet = $detect->isTablet();
+        $layoutTypes = layoutTypes();
+
+
+        if(empty($_SESSION["userAgent"])){
+            $_SESSION["userAgent"] = $_SERVER['HTTP_USER_AGENT'];
+        }
+
+        if (empty($_SESSION['layoutType'])) {
+            $layoutType = (($isMobile && !$isTablet) ? ($isTablet ? 'tablet' : 'mobile') : 'classic');
+            // Fallback. If everything fails choose classic layout.
+            if ( !in_array($layoutType, $layoutTypes) ) { $layoutType = 'classic'; }
+            // Store the layout type for future use.
+            $_SESSION['layoutType'] = $layoutType;
+        }
+
+
+        if(empty($_SESSION["layoutInfo"])){
+            if($_SESSION["layoutType"] != 'classic'){
+                $layoutInfo = "";
+                foreach($detect->getRules() as $name => $regex){
+                    $layoutInfo .=   "is".$name."=";
+                    $check = $detect->{'is'.$name}();
+                    $layoutInfo .= ($check)?"1":"0";
+                    $layoutInfo .= ";";
+                }
+                $_SESSION["layoutInfo"] = $layoutInfo;
+            }
+        }
+    }
+}
+
+/**
+ *  End helper functions.
+ */
+
+// Let's roll. Call this function!
+
+if(empty($_SESSION['layoutType']) || empty($_SESSION["userAgent"]))
+    initLayoutType();
+
+
+if(isset($userObject) && !$userObject->isAdmin && $_SERVER['REQUEST_URI'] != '/admin/'){
+    $track = new Track($userObject->userID,$_SERVER['REMOTE_ADDR'],$_SERVER['REQUEST_URI'],
+        $_SERVER['HTTP_REFERER'],$_SESSION['layoutType'],$_SESSION["layoutInfo"],$_SESSION["userAgent"]);
+    $track->logUser();
+}
+
+?>
+
+?>
+
+<div style="width:100%; clear:both;">
            
             	<div style=" width:20%; text-align:left; float:left; ">
                 <a href="/" > <img src="/images/oyvent_logo_medium.png" width="140" title="Oyvent" alt="Oyvent"></a>

@@ -148,7 +148,7 @@ if((!isset($username) || empty($username)) && isset($albumID)){
 <?php if(isset($albumID)){ ?>
 
 
-<?php include("menu.php"); ?>
+<?php //include("menu.php"); ?>
         
         <div class="maincontainer">
 
