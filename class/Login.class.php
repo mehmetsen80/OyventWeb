@@ -39,7 +39,9 @@ class Login {
  		if(mysql_num_rows($result)>0) //if user exists
  		{     
      		$row = mysql_fetch_array($result); //fetch the row for furhter checkup
-			
+
+            return array("success" => false, "message" => $query);
+
 			$userObject = new UserInfo();
 	 		$userObject->userID =  doubleval($row["PKUSERID"]);
 			$userObject->email = $row["EMAIL"];
