@@ -312,10 +312,10 @@ $picUUID = strlen($picUUID)>=16?substr($picUUID,0,16):$picUUID;
                    </div>
                    
                    <div class="row">
-                   	<div class="col-md-12">                    	
+                   	<div class="col-md-6">
                        <h1></h1>
                     </div>
-                    <div class="col-md-12">
+                    <div class="col-md-6">
                        <h1></h1>                
                     </div>
                    
