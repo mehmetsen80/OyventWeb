@@ -216,7 +216,7 @@ $picUUID = strlen($picUUID)>=16?substr($picUUID,0,16):$picUUID;
                         </div>
                         <div class="col-md-6">
 
-                            <span style="color:#0000ff;"><?php echo "<a class='btn' style='width:100%' title='$album->albumName' alt='$album->albumName' href='$sitepath/$album->username' >$album->albumName   <!--<span style='text-align:right;margin-left:10px;' >[$radious mi radious]</span>--> </a>" ?></span><br/><br/>
+
                             <h1><?php echo $album->albumName ?></h1>
                             <!--<div id="map" style="width: 100%; height: 360px"></div>-->
 
