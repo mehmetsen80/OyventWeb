@@ -122,7 +122,7 @@ $longitude = $geo["geoplugin_longitude"];
 			$numofthumbs = 0;	
 			
 			if(isset($albums))
-				$stralbums =  "<h2>Albums</h2>";
+				$stralbums =  "<h2>Latest Albums</h2>";
 			else 
 				$stralbums = "<h2>No album found, please create an album</h2>";
 			
