@@ -13,9 +13,9 @@
                  
                  <a href='/album/createalbum.php' title="Create Album" alt="Create Album" class='btn' ><i class='icon_plus'></i> Create Album</a>
                  
-                 <a href="/album/myalbums.php" class="btn btn-default btn-lg"   title="My Albums" alt="My Albums" ><i class="icon_images"></i>My Albums</a>
+                 <a href="/album/myalbums.php" class="btn btn-default btn-lg"   title="My Albums" alt="My Albums" ><i class="icon_images"></i> My Albums</a>
                  
-                 <a href="/admin/" class="btn btn-default btn-lg"   title="Import Photos from Social Media" alt="Import Photos from Social Media" ><i class="icon_cogs"></i>Import</a>
+                 <a href="/admin/" class="btn btn-default btn-lg"   title="Import Photos from Social Media" alt="Import Photos from Social Media" ><i class="icon_cogs"></i> Import</a>
                  
 				<a href="/logout.php?id=logout"  class="btn btn-default btn-lg">Logout <i class="arrow_right-up"></i></a>
             <?php } else {?>
