@@ -1,5 +1,5 @@
 <?php 
-//require_once($_SERVER['DOCUMENT_ROOT']."/checkuser.php");
+require_once($_SERVER['DOCUMENT_ROOT']."/checkuser.php");
 require_once($_SERVER['DOCUMENT_ROOT']."/class/Instagram.class.php");
 require_once($_SERVER['DOCUMENT_ROOT']."/admin/Instagram.config.php");
 require_once($_SERVER['DOCUMENT_ROOT']."/class/Album.class.php");
