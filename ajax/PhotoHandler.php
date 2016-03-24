@@ -204,9 +204,10 @@ require_once($_SERVER['DOCUMENT_ROOT']."/class/Album.class.php");
 			$piclarge->load($this->largeurl,strtoupper($ext));		
 			$width = $piclarge->getWidth() > 720?720:$piclarge->getWidth();					
 			$piclarge->resizeToWidth($width);
-			return array('success'	=>	false, 'error' => 'largeurl2: '.$this->largeurl);
+
 			$newfilelarge = '/tmp/'.$keylarge.'.jpg';				
-			$piclarge->save($newfilelarge,75,0777);			
+			$piclarge->save($newfilelarge,75,0777);
+			//return array('success'	=>	false, 'error' => 'largeurl2: '.$this->largeurl);
 			$resultlarge = createObject($foldername, $keylarge, $newfilelarge);
 			$URLLARGE = $resultlarge['ObjectURL'];
 			$piclarge_size = $piclarge->getFileSize();			      
@@ -214,7 +215,7 @@ require_once($_SERVER['DOCUMENT_ROOT']."/class/Album.class.php");
 			if(file_exists($newfilelarge))
 				unlink($newfilelarge);
 
-			return array('success'	=>	false, 'error' => 'newfilelarge: '.$newfilelarge);
+			//return array('success'	=>	false, 'error' => 'newfilelarge: '.$newfilelarge);
 		
 			//medium picture
 			$keymedium = $keyprefix.'-medium.jpg';
