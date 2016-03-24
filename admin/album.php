@@ -186,9 +186,9 @@ if((!isset($username) || empty($username)) && isset($albumID)){
                          <div class="cleardiv"></div>
                                 
                 	<a  class="btn" title="Import Photos from #Hashtag" style='margin:2px;width:250px;;'  onClick="gotoHashTagPage()" ><i class="icon_search-2"></i> Import Photos from #Hashtag</a>
-                    <a style='margin:2px;width:250px;'  class="btn" title="Import Photos from My Instagram"  onClick="gotoInstaTagPage()" ><i class="social_instagram"></i> Import Photos from Instagram</a>                    
-                    <a style='margin:2px;width:250px;'  class="btn" title="Import Photos from My Twitter"  onClick="gotoTwitTagPage()" ><i class="social_twitter"></i> Import Photos from Twitter</a>
-                    <a style='margin:2px;width:250px;'  class="btn" title="Import Photos from My Facebook"  onClick="gotoFacePage()" ><i class="social_facebook"></i> Import Photos from Facebook</a>
+                    <a style='margin:2px;width:250px;'  class="btn" title="Import Photos from My Instagram"  onClick="gotoInstaTagPage()" ><i class="social_instagram"></i> Import Photos from my Instagram</a>
+                    <a style='margin:2px;width:250px;'  class="btn" title="Import Photos from My Twitter"  onClick="gotoTwitTagPage()" ><i class="social_twitter"></i> Import Photos from my Twitter</a>
+                    <a style='margin:2px;width:250px;'  class="btn" title="Import Photos from My Facebook"  onClick="gotoFacePage()" ><i class="social_facebook"></i> Import Photos from my Facebook</a>
                   </div>	
                 
                 <ul style='padding:0px;margin:0px;text-align:center;' id="photos">
