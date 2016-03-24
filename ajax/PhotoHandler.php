@@ -200,6 +200,7 @@ require_once($_SERVER['DOCUMENT_ROOT']."/class/Album.class.php");
 			//large picture
 			$keylarge = $keyprefix.'-large.jpg';
 			$piclarge = new Picture();
+			return array('success'	=>	false, 'error' => 'largeurl: '.$this->largeurl);
 			$piclarge->load($this->largeurl,strtoupper($ext));		
 			$width = $piclarge->getWidth() > 720?720:$piclarge->getWidth();					
 			$piclarge->resizeToWidth($width);	
