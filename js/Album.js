@@ -469,15 +469,18 @@ function showMoreAlbumPhotos(rowat){
 
 function filterSubject(){
 	
-	//var albumID =  $("#txtAlbumID").val();	
+	var albumID =  $("#txtAlbumID").val();
 	var albumUsername = $("#txtAlbumUserName").val();	
 	var subjectID = $("#selSubject").val();	
 	
+	//if(subjectID == -1)
+	//	window.location = '/'+albumUsername+'/';
+	//else
+	//	window.location = '/'+albumUsername+'/'+subjectID;
+
+
 	if(subjectID == -1)
-		window.location = '/'+albumUsername+'/';
-	else	
-		window.location = '/'+albumUsername+'/'+subjectID;
-	
+		window.location = '/?albumID='+albumID+'&subjectID='+subjectID;
 }
 
 
