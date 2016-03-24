@@ -84,11 +84,11 @@ else if($region == "NY")
             <div class="container">
                 <div class="row">
                     <div id="welcome" class="col-sm-8">
-                    	<h2><b><u>What's happening around you?</u></b></h2>
-                        <h3 style='font-size:22px;font-weight:normal;'>Staying connected at a local level is now easier than ever. With Oyvent, you can view trending news, ads, events and anything popular in your area.
+                    	<h2><b><u>Albums for Communities</u></b></h2>
+                        <h3 style='font-size:22px;font-weight:normal;'>As photos flow social media, we help you to store your photos in one place. With Oyvent, you can view, import and share trending photos with your community.
 </h3><br>
-                        <h2><b><u>Enhance your experience at local level <?php //echo $album; ?></u></b></h2>
-                        <h3 style='font-size:22px;font-weight:normal;'>Oyvent allows you to add and view posts based on where you are, and then group them together in a specific community.</h3>
+                        <h2><b><u>Enhance your experience at your community <?php //echo $album; ?></u></b></h2>
+                        <h3 style='font-size:22px;font-weight:normal;'>Oyvent allows you to add and view posts based on interests, and then group them together in a specific community.</h3>
                         <a href="/Explore.php" class="btn btn-default btn-lg">Explore</a>
                     </div>
                     <div class="col-sm-4">
