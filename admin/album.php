@@ -12,6 +12,7 @@ $albumID = $_GET["albumID"];
 $username = $_GET["usr"];
 $subjectID = $_GET["sbj"];
 
+echo $username.' '.$subjectID;
 
 $album = NULL;
 $photos = NULL;
