@@ -71,7 +71,7 @@ if(isset($albumID) && $albumID != ""){
 				<section id="contentArea"><!-- This is where all the content goes -->
                 
                 	<div class="center">
-                    	<h2>Please choose your Group to navigate</h2>
+                    	<h2>Please choose your album to navigate</h2>
                 	</div>
                     
                     <div class="grid">
@@ -79,7 +79,7 @@ if(isset($albumID) && $albumID != ""){
                         <?php if(isset($userObject)) { ?>
 							
                             	<select class="select" id="selAlbum"  name="selAlbum">
-                            		<option value="0">Select a Group</option>
+                            		<option value="0">Select an album</option>
                                     <?php	
 		
 									$myalbums = new Album($userObject->userID);
