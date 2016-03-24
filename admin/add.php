@@ -194,7 +194,7 @@ $picUUID = strlen($picUUID)>=16?substr($picUUID,0,16):$picUUID;
 			<div class="main">
 				<section id="contentArea"><!-- This is where all the content goes -->
                   
-                  	<div  class="center" style="padding:1px;"> 
+                  	<!-- <div  class="center" style="padding:1px;">
                      <span style='font-size:14px;color:#0000ff;'><h3 style='color:#047fb7;'>Your distance to the geo-album is <?php echo $distance ?>&nbsp;&nbsp;&nbsp; <?php if($iseligible){ ?><=<?php }else{ ?>><?php  }?>&nbsp;&nbsp;&nbsp;radious=<?php echo $radious ?> mi &nbsp;
                             <?php if($iseligible){ ?>
                      		<img height="32" src="/images/ok.png" alt="You are eligible to post!" title="You are eligible to post!" />                            
@@ -204,6 +204,7 @@ $picUUID = strlen($picUUID)>=16?substr($picUUID,0,16):$picUUID;
                         </h3>
                             </span>   
                     </div>
+                    -->
                   	
                   
                   	<div class="row">                  	
@@ -264,13 +265,13 @@ $picUUID = strlen($picUUID)>=16?substr($picUUID,0,16):$picUUID;
                     <div class="col-md-6" style='text-align:left;'>
   	                 		<h1>Geo Album</h1>    
                          
-                         <span style="color:#0000ff;"><?php echo "<a class='btn' style='width:100%' title='$album->albumName' alt='$album->albumName' href='$sitepath/$album->username' >$album->albumName   <span style='text-align:right;margin-left:10px;' >[$radious mi radious]</span> </a>" ?></span><br/><br/>
+                         <span style="color:#0000ff;"><?php echo "<a class='btn' style='width:100%' title='$album->albumName' alt='$album->albumName' href='$sitepath/$album->username' >$album->albumName   <!--<span style='text-align:right;margin-left:10px;' >[$radious mi radious]</span>--> </a>" ?></span><br/><br/>
                          
                          <div id="map" style="width: 100%; height: 360px"></div>
                                                              
                       
                       <?php                           							
-							/*$thumbs = $album->getLatestPhotoThumbs(66);
+							$thumbs = $album->getLatestPhotoThumbs(66);
 							$strthumbs = "";
 							$stralbums = "";
 							foreach($thumbs as $thumb){
@@ -284,7 +285,7 @@ $picUUID = strlen($picUUID)>=16?substr($picUUID,0,16):$picUUID;
 				
 							</div></a>";
 							
-							echo $stralbums;*/
+							echo $stralbums;
                        ?>
                    	</div>
                     
