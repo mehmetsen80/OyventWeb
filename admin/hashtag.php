@@ -107,11 +107,13 @@ $tag = trim($tag);
  <input type="hidden" name="txtAlbumID" id="txtAlbumID" value="<?php echo $tempAlbumID ?>" />
  <input type="hidden" id="txtAlbumUsername" value="<?php echo $tempalbum->username ?>" >
 
-<?php include("menu.php"); ?>
+<?php //include("menu.php"); ?>
        
-        <div class="container">
+        <div class="maincontainer">
 			
 			<div class="main">
+
+				<?php include("../header.php"); ?>
              
 				<section id="contentArea"><!-- This is where all the content goes -->
                 
@@ -186,7 +188,7 @@ $tag = trim($tag);
 						  </a>
 						   
 						   <div class='add2album'>
-						   <a class='btn'  data-instagramid='{$data->id}' data-smallurl='{$data->images->thumbnail->url}' data-mediumurl='{$data->images->low_resolution->url}' data-largeurl='{$data->images->standard_resolution->url}' data-thumburl='{$data->images->thumbnail->url}'  data-ownedby='{$data->user->username}' data-createdtime='{$createdtime}' data-likes='{$data->likes->count}' data-contentlink='{$data->link}' data-tags='{$tags}' data-latitude='{$data->location->latitude}' data-longitude='{$data->location->longitude}' data-contenttype='{$data->type}'     data-caption='{$caption}'  onClick='addInstagramPhoto(this)' >Add to ".strtoupper($tempalbum->username)." </a>					   						   
+						   <a class='btn'  data-instagramid='{$data->id}' data-smallurl='{$data->images->thumbnail->url}' data-mediumurl='{$data->images->low_resolution->url}' data-largeurl='{$data->images->standard_resolution->url}' data-thumburl='{$data->images->thumbnail->url}'  data-ownedby='{$data->user->username}' data-createdtime='{$createdtime}' data-likes='{$data->likes->count}' data-contentlink='{$data->link}' data-tags='{$tags}' data-latitude='{$data->location->latitude}' data-longitude='{$data->location->longitude}' data-contenttype='{$data->type}'     data-caption='{$caption}'  onClick='addInstagramPhoto(this)' >Add to ".strtoupper($tempalbum->username)." </a>
 						    <div style='width:100%; padding:2px;  text-align:right;'>								
 								<a title='{$data->link}' href='{$data->link}' style='background:#ffffff;' ><img height='16' width='16' src='/images/instagram-icon-32.png' ></a>
 							</div> 
