@@ -212,7 +212,7 @@ function renderPhotoThumbs()
 	var longitude = $(obj).data('longitude');
 
 
-	 $('#dgModal').dialog("open");
+
 	
 	//alert("userID:"+userID+" instagramid:"+instagramid+" largeurl:"+largeurl+ " mediumurl:"+mediumurl+" smallurl:"+smallurl+"  ownedby:"+ownedby+" caption:"+caption+" link:"+contentlink+" contenttype:"+contenttype+" createdtime:"+createdtime+" tags:"+tags+" longitude:"+longitude+" latitude:"+latitude+" likes:"+likes);
 
@@ -220,8 +220,8 @@ function renderPhotoThumbs()
 	var info = encodeURI("userID="+userID+"&albumID="+albumID+"&instagramid="+instagramid+"&thumburl=''&smallurl="+smallurl+"&mediumurl="+mediumurl+"&largeurl="+largeurl+"&caption=&createdtime="+createdtime+"&likes="+likes+"&contentlink="+contentlink+"&contenttype="+contenttype+"&tags="+tags+"&latitude="+latitude+"&longitude="+longitude+"&ownedby="+ownedby+"&processType=UPLOADPHOTO&nocache="+Math.random());
 	var uri = encodeURI("/ajax/PhotoHandler.php");
 	
-	$(obj).attr("disabled", "true");	
-
+	$(obj).attr("disabled", "true");
+	 $('#dgModal').dialog("open");
 	
 	
 	

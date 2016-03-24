@@ -215,7 +215,7 @@ require_once($_SERVER['DOCUMENT_ROOT']."/Tools.php");
 			$width = $piclarge->getWidth() > 720?720:$piclarge->getWidth();			
 			$piclarge->resizeToWidth($width);	
 			$newfilelarge = '/tmp/'.$keylarge.'.jpg';				
-			$piclarge->save($newfilelarge,75,0777);			
+			$piclarge->save($newfilelarge,90,0777);
 			//return array('success'	=>	false, 'error' => 'size:'.$piclarge->getFileSize()	.' large url:'.$this->largeurl, 'pkPhotoID' => '');	
 			$resultlarge = createObject($foldername, $keylarge, $newfilelarge);
 			 
@@ -230,14 +230,11 @@ require_once($_SERVER['DOCUMENT_ROOT']."/Tools.php");
 			//medium picture
 			$keymedium = $keyprefix.'-medium.jpg';
 			$picmedium = new Picture();				
-			$picmedium->load($this->largeurl, strtoupper($ext));			
-			$width = $picmedium->getWidth();
-			if($width >= 250)		
-				$picmedium->resize(250,250);
-			else
-				$picmedium->resizeToWidth($width);
+			$picmedium->load($this->largeurl, strtoupper($ext));
+			$width = $picmedium->getWidth() > 250?250:$picmedium->getWidth();
+			$picmedium->resizeToWidth($width);
 			$newfilemedium = '/tmp/'.$keymedium.'.jpg';	
-			$picmedium->save($newfilemedium,75,0777);			
+			$picmedium->save($newfilemedium,90,0777);
 			$resultmedium = createObject($foldername, $keymedium, $newfilemedium);			
 			$URLMEDIUM = $resultmedium['ObjectURL'];
 			$picmedium_size = $picmedium->getFileSize();
@@ -249,9 +246,10 @@ require_once($_SERVER['DOCUMENT_ROOT']."/Tools.php");
 			$keysmall = $keyprefix.'-small.jpg';
 			$picsmall = new Picture();				
 			$picsmall->load($this->largeurl, strtoupper($ext));	//facebook thumb is usally small		
-			$picsmall->resize(150,150); //let's accept all the mediums as 150x150
+			$width = $picsmall->getWidth() > 150?150:$picsmall->getWidth();
+			$picsmall->resizeToWidth($width);
 			$newfilesmall = '/tmp/'.$keysmall.'.jpg';				
-			$picsmall->save($newfilesmall,75,0777);			
+			$picsmall->save($newfilesmall,90,0777);
 			$resultsmall = createObject($foldername, $keysmall, $newfilesmall);
 			$URLSMALL = $resultsmall['ObjectURL'];
 			$picsmall_size = $picsmall->getFileSize();
@@ -266,7 +264,7 @@ require_once($_SERVER['DOCUMENT_ROOT']."/Tools.php");
 			$picsthumb->load($this->thumburl, strtoupper($ext));			
 			$picsthumb->resize(50,50); //let's accept all the thumbnails as 150x150				
 			$newfilethumb = '/tmp/'.$keythumb.'.jpg';			
-			$picsthumb->save($newfilethumb,75,0777);
+			$picsthumb->save($newfilethumb,90,0777);
 			$resultthumb = createObject($foldername, $keythumb, $newfilethumb);
 			$URLTHUMB = $resultthumb['ObjectURL'];
 			$picsthumb_size = $picsthumb->getFileSize();
