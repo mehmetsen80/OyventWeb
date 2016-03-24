@@ -32,7 +32,7 @@ class Login {
   		// select first required fields to check;  activeness, isblocked, email, deactivated
  		$query =  "SELECT PKUSERID,USERUUID, FULLNAME,USERNAME, EMAIL,ISVERIFIED, FIRSTLOGINDATE,LASTLOGINDATE,LASTACTIVEDATE,INSTAGRAMID, ISACTIVE, ISBLOCKED, ISADMIN, FIRSTINIP, LASTINIP FROM TBLUSER  WHERE (TRIM(EMAIL)='$email' AND PASSWORD='$password') OR (TRIM(USERNAME)='$email' AND PASSWORD='$password') ";
 		
-		return array("success" => false, "message" => $query);
+		//return array("success" => false, "message" => $query);
  
  		$result = executeQuery($query);
  
