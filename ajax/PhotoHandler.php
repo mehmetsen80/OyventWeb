@@ -183,7 +183,8 @@ require_once($_SERVER['DOCUMENT_ROOT']."/class/Album.class.php");
         	$filename = $pathinfo['filename'];       
         	$ext = $pathinfo['extension'];
 			$ext = strtolower($ext);
-			
+			$ext = "JPG";
+
 //			if($this->allowedExtensions && !in_array(strtolower($ext), $this->allowedExtensions)){
 //            	$these = implode(', ', $this->allowedExtensions);
 //            	return array('success'	=>	false, 'error' => 'File has an invalid extension:'.$ext.' It should be one of: '.$these.'.');
