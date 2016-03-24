@@ -147,7 +147,13 @@ if((!isset($username) || empty($username)) && isset($albumID)){
 <?php if(isset($albumID)){ ?>
 
 
-<?php  include("menu.php");  ?>
+<?php
+
+    if(isset($_SESSION["userObject"])){
+        include("menu.php");
+    }
+
+ ?>
         
         <div class="container">
         
