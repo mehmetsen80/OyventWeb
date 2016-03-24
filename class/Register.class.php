@@ -37,7 +37,7 @@ class Register {
 		$arr = $this->checkPassword($password);
 		if(!$arr["success"]) return $arr;  
 		
-		$password = hashPassword("aro071buqW",$password);	
+		$password = hashPassword("aro071buqW",$password);
 	 	
 	 	//generate unique id for primary key	  	
 		$userUUID = UUID::generate(UUID::UUID_RANDOM, UUID::FMT_STRING,"02831768");
