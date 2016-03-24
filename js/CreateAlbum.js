@@ -77,8 +77,8 @@ function executeAlbum(action){
 		return;
 	}
 	
-	if(username.length < 4 || username.length > 20){
-		alert("Album address must be between 4-20 characters!");
+	if(username.length > 20){
+		alert("Album address must be less than 20 characters!");
 		return;
 	}
 		
