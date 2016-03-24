@@ -210,8 +210,9 @@ require_once($_SERVER['DOCUMENT_ROOT']."/class/Album.class.php");
 			$piclarge_size = $piclarge->getFileSize();			      
 			$piclarge->destroy_buffer();
 			if(file_exists($newfilelarge))
-				unlink($newfilelarge);				
-			
+				unlink($newfilelarge);
+
+			return array('success'	=>	false, 'error' => 'newfilelarge: '.$newfilelarge);
 		
 			//medium picture
 			$keymedium = $keyprefix.'-medium.jpg';
@@ -292,7 +293,6 @@ require_once($_SERVER['DOCUMENT_ROOT']."/class/Album.class.php");
 				}
 				else
 				{
-					return array('success'	=>	false, 'error' => 'InstIds: '.$InstIds);
 
 					if(sizeof($InstIds) > 1)
 					{					
