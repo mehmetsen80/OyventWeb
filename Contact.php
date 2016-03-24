@@ -67,9 +67,9 @@
                         <div class="panel">                        
                               <h4>Oyvent Team</h4>
                               <h5><a href="mailto:mehmetsen80@gmail.com" >Mehmet Sen</a><br>Co-Founder, Developer</h5>
-                              <h5><a href="mailto:amac03123@gmail.com" >Adam MacDonald</a><br>Co-Founder, Product Specialist</h5>
+                              <!--<h5><a href="mailto:amac03123@gmail.com" >Adam MacDonald</a><br>Co-Founder, Product Specialist</h5>
                               <h5><a href="mailto:ashifrankedesigns@gmail.com" >Ashi Franke</a><br>Graphic Design Studio BFA at UALR</h5>
-                              <h5><a href="mailto:ryoung1994@gmail.com" >Richard Young</a><br>Information Science BS at UALR</h5>
+                              <h5><a href="mailto:ryoung1994@gmail.com" >Richard Young</a><br>Information Science BS at UALR</h5>-->
                               <br>
                               <h4>General Questions</h4>    
                               <h5><a href="mailto:info@oyvent.com" >info@oyvent.com</a></h5>
