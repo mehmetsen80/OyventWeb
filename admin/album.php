@@ -281,7 +281,7 @@ if((!isset($username) || empty($username)) && isset($albumID)){
 					if(!$hasvoted){						
 						$strDelDown .= "<a class='blue' style='float:left;font-size:20px;' data-photoid='".$photo['PKPHOTOID']."' title='+1' alt='+1'  onClick='voteup(this)' > <i class='arrow_triangle-up'></i></a>";
 					}					
-					$oys =  $photo["OY"] <= 0 || $photo["OY"] == null ?$photo["OY"]." oys":"+".$photo["OY"]." oys";
+					$oys =  $photo["OY"] <= 0 || $photo["OY"] == null ?"0 oys":"+".$photo["OY"]." oys";
 					$strDelDown .= "<div  style='float:left;font-size:16px;padding-right:2px;margin-right:2px;' >".$oys."</div>";
 					
 					if(!$hasvoted){
@@ -297,7 +297,7 @@ if((!isset($username) || empty($username)) && isset($albumID)){
 					//social media						
 					$strDelDown .= "<div class='icon-left' >".$strSocialMedia."</div>";	
 					//miles	
-					$strDelDown .= "<div class='icon-right' style='font-size:14px;margin-top:8px;padding-top:3px;'>".number_format(distance($photo['LAT1'],$photo['LONG1'],$photo['LAT2'],$photo['LONG2'],'M'),2)." mi</div>"; 
+					//$strDelDown .= "<div class='icon-right' style='font-size:14px;margin-top:8px;padding-top:3px;'>".number_format(distance($photo['LAT1'],$photo['LONG1'],$photo['LAT2'],$photo['LONG2'],'M'),2)." mi</div>";
 					
 					$ownedby = isset($photo["OWNEDBY"])&&$photo["OWNEDBY"]!=""?"<p>owned by @".$photo["OWNEDBY"]."</p>":"";
 					$isverified = $photo["ISVERIFIED"]?"<img src='/images/ok.png' width='16' height='16' >":"";					
