@@ -292,6 +292,8 @@ require_once($_SERVER['DOCUMENT_ROOT']."/class/Album.class.php");
 				}
 				else
 				{
+					return array('success'	=>	false, 'error' => 'InstIds: '.$InstIds);
+
 					if(sizeof($InstIds) > 1)
 					{					
 						$query = " INSERT INTO TBLINSTAGRAM 
