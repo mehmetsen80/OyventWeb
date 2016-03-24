@@ -72,7 +72,7 @@
                   <div class="row">
                     <div id="welcome" class="col-sm-8" >
                         <h1>Why Use Oyvent?</h1>
-                        <h3>Oyvent gives you a local voice to collaborate and share news inside your current radius.</h3>
+                        <h3>Oyvent gives you a voice to collaborate and share posts inside your community.</h3>
                         
                 
                         
@@ -82,12 +82,12 @@
                     <div class="col-sm-4">
                         <div class="panel">                        
                         <h4>What is used for?</h4>                            
-                              Oyvent is the visual community platform that allows users to share local experiences.<br><br>Share club and sporting events, music activities, festivals, study sessions, restaurants, celebrities, food,  classes, dorm life, conferences, parties and more.            
+                              Oyvent is the visual community platform for communities.<br><br>Share club and sporting events, music activities, festivals, study sessions, restaurants, celebrities, food,  classes, dorm life, conferences, parties and more.
                         </div>
                         
                         <div class="panel">                        
-                        <h4>Radius matters!</h4>
-                              Currently, Oyvent only operates at the University of Arkansas at Little Rock and University at Albany. <br><br>Web posts are shared only within a 3 mile radius from the campus.
+                        <h4>Only at NAU!</h4>
+                              Currently, Oyvent only operates at North American University. <br><br>We are expecting to expand this tool soon to other communities as well.
                         </div>
                           
                     </div>                    
