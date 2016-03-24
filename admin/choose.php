@@ -6,8 +6,6 @@ include($_SERVER['DOCUMENT_ROOT']."/Settings.php");
 
 $albumID = $_GET["albumID"];
 
-//go to nau by default, remove this later
-$albumID = 1;
 
 $geo =  unserialize(file_get_contents("http://www.geoplugin.net/php.gp?ip=".$_SERVER['REMOTE_ADDR']));
 $latitude = $geo["geoplugin_latitude"];

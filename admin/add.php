@@ -9,11 +9,13 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/class/UUID.class.php');
 
 $albumID = $_GET["albumID"]; 
 
+//nau album by default, remove this later!
+$albumID = 1;
 
-if($_SESSION["region"] == "AR")
-	$albumID = 34;
-if($_SESSION["region"] == "NY")
-	$albumID = 35;
+//if($_SESSION["region"] == "AR")
+//	$albumID = 34;
+//if($_SESSION["region"] == "NY")
+//	$albumID = 35;
 
 $_SESSION['redirect_url'] = $_SERVER['REQUEST_URI'];
 if(!isset($albumID) || empty($albumID)){	
