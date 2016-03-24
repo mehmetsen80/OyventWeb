@@ -263,7 +263,7 @@ if((!isset($username) || empty($username)) && isset($albumID)){
 						$strSocialMedia .= "<a title='".$photo['CONTENTLINK']."' href='".$photo['CONTENTLINK']."' style='background:#ffffff;padding-right:2px;' ><img height='16' width='16' src='/images/facebook-icon-32.png' ></a>";						
 					
 					if(isset($photo["FKALBUMID"])){
-						$strSocialMedia .= "  <a class='blue' style='font-size:14px;' title='".$photo['ALBUMNAME']."' href='".$sitepath."/".$username."/".$photo["FKALBUMID"]."' ><i class='icon_tag_alt'></i> ".substr($photo['ALBUMNAME'],0,23)."</a>";
+						$strSocialMedia .= "  <a class='blue' style='font-size:14px;' title='".$photo['ALBUMNAME']."' href='".$sitepath."/".$username."/".$photo["FKALBUMID"]."' ><i class='icon_tag_alt'></i> ".substr($photo['ALBUMNAME'],0,32)."</a>";
 					}
 					
 					$strDelDown = "<div class='icon-left' style='font-size:16px;'>";					
