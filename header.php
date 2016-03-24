@@ -1,7 +1,7 @@
  <div style="width:100%; clear:both;">
            
             	<div style=" width:20%; text-align:left; float:left; ">
-                <a href="/" > <img src="/images/oyvent_logo_medium.png" width="180" title="Oyvent" alt="Oyvent"></a>
+                <a href="/" > <img src="/images/oyvent_logo_medium.png" width="140" title="Oyvent" alt="Oyvent"></a>
                 </div>
                           
                 
