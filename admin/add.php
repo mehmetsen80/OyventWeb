@@ -228,7 +228,7 @@ $picUUID = strlen($picUUID)>=16?substr($picUUID,0,16):$picUUID;
 
                             $stralbums = "<a title='$album->albumName' alt='$album->albumName' href='".$sitepath."/$album->username'>
 							<div class='album' >
-
+                                <span>$strthumbs</span>
 								<h3 style='color:#ff0000;'>".$album->photosize." photos</h3>
 
 							</div></a>";
