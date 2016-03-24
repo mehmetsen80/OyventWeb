@@ -198,7 +198,7 @@ class Regex
    public static function isUsernameLegal($aUsernameToCheck = "")
    {
       $result = 0;
-      $regEx = "^[[:alnum:]]{4,20}$";
+      $regEx = "^[[:alnum:]]{1,20}$";
       if (@ereg($regEx, $aUsernameToCheck)) {
          $result = 1;
       }
