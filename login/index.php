@@ -84,8 +84,8 @@ else if($region == "NY")
             <div class="container">
                 <div class="row">
                     <div id="welcome" class="col-sm-8">
-                    	<h2><b><u>Albums for Communities</u></b></h2>
-                        <h3 style='font-size:22px;font-weight:normal;'>As photos flow social media, we help you to store your photos in one place. With Oyvent, you can view, import and share trending photos with your community.
+                    	<h2><b><u>Albums for your Community</u></b></h2>
+                        <h3 style='font-size:22px;font-weight:normal;'>As photos flow social media, we help you to store your photos in one place. With Oyvent, you can view, import and share trending community photos.
 </h3><br>
                         <h2><b><u>Enhance your experience at your community <?php //echo $album; ?></u></b></h2>
                         <h3 style='font-size:22px;font-weight:normal;'>Oyvent allows you to add and view posts based on interests, and then group them together in a specific community.</h3>
