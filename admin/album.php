@@ -149,19 +149,14 @@ if((!isset($username) || empty($username)) && isset($albumID)){
 <?php if(isset($albumID)){ ?>
 
 
-<?php
-
-    if(isset($_SESSION["userObject"])){
-        include("menu.php");
-    }
-
- ?>
+<?php //include("menu.php"); ?>
         
         <div class="container">
-        
-       
-			
+
 			<div class="main">
+
+                <?php include("../header.php"); ?>
+
 				<section id="contentArea"><!-- This is where all the content goes -->
               
                 	<div  class="center">
