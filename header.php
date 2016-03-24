@@ -84,7 +84,7 @@ if(isset($userObject) && !$userObject->isAdmin && $_SERVER['REQUEST_URI'] != '/a
     $track->logUser();
 }
 
-?>
+
 
 ?>
 
