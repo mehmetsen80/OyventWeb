@@ -34,6 +34,7 @@ $ismostrated = $subjectID == "-2"?1:0;
 if(isset($username) && !empty($username)){
 	$album = new Album($userObject->userID);
 	$tempID = $album->getAlbumIDFromUsername($username);
+    echo "tempID:".$tempID;
 	if(isset($tempID)){
 		$albumID = $tempID;
 	}
