@@ -95,7 +95,7 @@ $longitude = $geo["geoplugin_longitude"];
 
 		<?php //include("menu.php"); ?>
         
-        <div class="container">
+        <div class="maincontainer">
 			
 			<div class="main">
 
