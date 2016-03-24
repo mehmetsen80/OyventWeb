@@ -138,7 +138,7 @@ if(isset($userObject) && !$userObject->isAdmin && $_SERVER['REQUEST_URI'] != '/a
                 <li><a href="/admin/hashtag.php?social=1"><i class="social_twitter"></i> Twitter Photos</a></li>
             </ul>
             
-			<h3>Import My Content</h3>
+			<h3>Import My Photos</h3>
 			<ul>            	
 				<li><a href="/admin/instaphotos.php"><i class="social_instagram"></i> My Instagram Photos</a></li>
                 <li><a href="/admin/instatimeline.php"><i class="social_instagram"></i> My Instagram Timeline</a></li>         

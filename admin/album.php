@@ -173,15 +173,14 @@ if((!isset($username) || empty($username)) && isset($albumID)){
                   <div  class="center" >  
                   
                     <h1><?php echo "$album->albumName" ?></h1>
-                   
-                	 <div  class="right" style='margin:5px; width:100%;clear:both;'> 
-                     <a href="/admin/add.php?albumID=<?php echo "$albumID" ?>"  class="btnred" title="Add Content" alt="Add Content"  ><i class="icon_plus"></i> Add Post</a> 
-                      <!--<?php  if(isset($userObject) && ($album->albumUserID == $userObject->userID)){ ?>
+
+                      <!--<div  class="right" style='margin:5px; width:100%;clear:both;'>
+                     <?php  if(isset($userObject) && ($album->albumUserID == $userObject->userID)){ ?>
                      <a  class="btnred" title="Delete Album" alt="Delete Album"  onClick="deleteAlbum()" ><i class="icon_trash_alt"></i> Delete</a> <a class='btnred' title="Edit Album" alt="Edit Album" href='/admin/createalbum.php?albumID=<?php echo $albumID ?>'><i class="icon_pencil-edit"></i> Edit</a>
-                     <?php } ?>-->
+                     <?php } ?>
                      </div>
                		 
-                         <!--<div id="map" class="map" ></div>-->
+
                          
                          <div class="cleardiv"></div>
                                 
@@ -189,7 +188,7 @@ if((!isset($username) || empty($username)) && isset($albumID)){
                     <a style='margin:2px;width:280px;'  class="btn" title="Import Photos from My Instagram"  onClick="gotoInstaTagPage()" ><i class="social_instagram"></i> Import photos from my Instagram</a>
                     <a style='margin:2px;width:250px;'  class="btn" title="Import Photos from My Twitter"  onClick="gotoTwitTagPage()" ><i class="social_twitter"></i> Import photos from my Twitter</a>
                     <a style='margin:2px;width:250px;'  class="btn" title="Import Photos from My Facebook"  onClick="gotoFacePage()" ><i class="social_facebook"></i> Import photos from my Facebook</a>
-                  </div>	
+                  </div>	-->
                 
                 <ul style='padding:0px;margin:0px;text-align:center;' id="photos">
                 
