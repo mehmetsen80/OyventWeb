@@ -105,7 +105,7 @@ $longitude = $geo["geoplugin_longitude"];
                     
                     
                   <a href='createalbum.php'><img src='/images/addalbum.png'>
-                  <h2>Create a Group</h2></a>                   
+                  <h2>Create an Album</h2></a>
                     
                 </div>
                 
@@ -122,7 +122,7 @@ $longitude = $geo["geoplugin_longitude"];
 			$numofthumbs = 0;	
 			
 			if(isset($albums))
-				$stralbums =  "<h2>Groups Near By</h2>";
+				$stralbums =  "<h2>Albums</h2>";
 			else 
 				$stralbums = "<h2>No album found, please create an album</h2>";
 			
@@ -139,8 +139,11 @@ $longitude = $geo["geoplugin_longitude"];
 				$stralbums .= "<a href='album.php?albumID=".$album["PKALBUMID"]."'>
 				<div class='album' >
 				<span>".$album["NAME"]."<br>".$strthumbs."<br></span>
-				<h3 style='color:#ff0000;'>".$numofthumbs." photos  - ".number_format($album["DISTANCE"],2)." mi</h3>
+
+				<h3 style='color:#ff0000;'>".$numofthumbs." photos</h3>
 				</div></a>";
+
+				//*<h3 style='color:#ff0000;'>".$numofthumbs." photos  - ".number_format($album["DISTANCE"],2)." mi</h3>*/
 			}
 		
 			
