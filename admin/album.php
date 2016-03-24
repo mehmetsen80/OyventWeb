@@ -12,7 +12,6 @@ $albumID = $_GET["albumID"];
 $username = $_GET["usr"];
 $subjectID = $_GET["subjectID"];
 
-echo $username.' '.$subjectID;
 
 $album = NULL;
 $photos = NULL;
@@ -34,7 +33,7 @@ $ismostrated = $subjectID == "-2"?1:0;
 if(isset($username) && !empty($username)){
 	$album = new Album($userObject->userID);
 	$tempID = $album->getAlbumIDFromUsername($username);
-    echo "tempID:".$tempID;
+
 	if(isset($tempID)){
 		$albumID = $tempID;
 	}
@@ -151,7 +150,7 @@ if((!isset($username) || empty($username)) && isset($albumID)){
 
 <?php //include("menu.php"); ?>
         
-        <div class="container">
+        <div class="maincontainer">
 
 			<div class="main">
 
