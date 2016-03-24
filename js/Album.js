@@ -480,9 +480,9 @@ function filterSubject(){
 
 
 	if(subjectID == -1)
-		window.location = '/?albumID='+albumID;
+		window.location = '/admin/album.php?albumID='+albumID;
 	else
-		window.location = '/?albumID='+albumID+'&subjectID='+subjectID;
+		window.location = '/admin/album.php?albumID='+albumID+'&subjectID='+subjectID;
 }
 
 
