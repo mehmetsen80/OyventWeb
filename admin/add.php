@@ -241,8 +241,11 @@ $picUUID = strlen($picUUID)>=16?substr($picUUID,0,16):$picUUID;
 
                     </div>
                   
-                  	<div class="row">                  	
-                    	<div class="col-md-5" style='text-align:left;'>
+                  	<div class="row">
+                        <div class="col-md-3">
+
+                        </div>
+                    	<div class="col-md-6" style='text-align:left;'>
                           <h1 >Add Post</h1>                                                              
                           <select class="txt" id="selSubject" style='width:100%; height:36px;color:#000000;'>
                            <option value='<?php echo $album->albumID; ?>' ><?php echo $album->albumName; ?></option>
@@ -292,13 +295,10 @@ $picUUID = strlen($picUUID)>=16?substr($picUUID,0,16):$picUUID;
                         
                          
                    		</div>
-                   
-                    <div class="col-md-1">
 
-                    </div>
-                    <div class="col-md-6" style='text-align:left;'>
+                        <div class="col-md-3">
 
-                   	</div>
+                        </div>
                     
                    
                     
