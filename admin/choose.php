@@ -60,12 +60,14 @@ if(isset($albumID) && $albumID != ""){
 
  <input type="hidden" id="txtUserID" value="<?php echo $userObject->userID ?>" >
  
- <?php include("menu.php"); ?>
+ <?php //include("menu.php"); ?>
        
-        <div class="container">
+        <div class="maincontainer">
 			
 			<div class="main">
-             
+
+				<?php include("../header.php"); ?>
+
 				<section id="contentArea"><!-- This is where all the content goes -->
                 
                 	<div class="center">
