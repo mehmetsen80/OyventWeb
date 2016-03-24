@@ -101,11 +101,12 @@ if(isset($userObject) && !$userObject->isAdmin && $_SERVER['REQUEST_URI'] != '/a
                  
                  <a href="/" class="btn btn-default btn-lg" title="Home" alt="Home" ><i class="icon_menu-square_alt"></i> Home</a>
                  
-                 <a href='/album/createalbum.php' title="Create Album" alt="Create Album" class='btn' ><i class='icon_plus'></i> Create Album</a>
+                 <!--<a href='/album/createalbum.php' title="Create Album" alt="Create Album" class='btn' ><i class='icon_plus'></i> Create Album</a>
+                 <a href="/album/myalbums.php" class="btn btn-default btn-lg"   title="My Albums" alt="My Albums" ><i class="icon_images"></i> My Albums</a>-->
 
                  <a href='/admin/add.php' title="Add Post" alt="Add Post" class='btn' ><i class='icon_pencil'></i> Add Post</a>
 
-                 <a href="/album/myalbums.php" class="btn btn-default btn-lg"   title="My Albums" alt="My Albums" ><i class="icon_images"></i> My Albums</a>
+
                  
                  <a href="/admin/" class="btn btn-default btn-lg"   title="Admin" alt="Admin" ><i class="icon_cogs"></i> Admin</a>
                  
