@@ -93,7 +93,7 @@ else if($region == "NY")
                     </div>
                     <div class="col-sm-4">
                         <div class="panel">
-                            
+                                <h4>Sign in</h4>
                                 <input type="text"  name="txtEmail" id="txtEmail" onFocus="initLogin()" placeholder="Email"><br>
                                 <input type="password" onKeyPress="fireLoginUser(event)" onFocus="initLogin()" name="txtPassword" id="txtPassword" placeholder="Password"><br>
                                 <input type="submit" id="btnLogin" onClick="loginUser()" value="Sign In">
@@ -102,7 +102,7 @@ else if($region == "NY")
                            
                         </div>
                         <div class="panel">
-                            <h4>Sign Up Now</h4>
+                            <h4>Sign Up</h4>
                             
                                 <input type="text" name="fullname" id="txtFullName" name="txtFullName"  placeholder="Full Name"><br>
                                 <input type="text" name="txtEmail2" id="txtEmail2" onFocus="validateEmailSignUpUser()"  onKeyUp="validateEmailSignUpUser()" placeholder="Email"><br>
