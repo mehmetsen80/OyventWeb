@@ -107,13 +107,13 @@ $tag = trim($tag);
  <input type="hidden" name="txtAlbumID" id="txtAlbumID" value="<?php echo $tempAlbumID ?>" />
  <input type="hidden" id="txtAlbumUsername" value="<?php echo $tempalbum->username ?>" >
 
-<?php include("menu.php"); ?>
+<?php //include("menu.php"); ?>
        
-        <div class="container">
+        <div class="maincontainer">
 			
 			<div class="main">
 
-				<?php //include("../header.php"); ?>
+				<?php include("../header.php"); ?>
              
 				<section id="contentArea"><!-- This is where all the content goes -->
                 
