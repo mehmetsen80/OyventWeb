@@ -102,7 +102,7 @@ else if($region == "NY")
                            
                         </div>
                         <div class="panel">
-                            <h4>Sign Up</h4>
+                            <h4>Sign Up Now</h4>
                             
                                 <input type="text" name="fullname" id="txtFullName" name="txtFullName"  placeholder="Full Name"><br>
                                 <input type="text" name="txtEmail2" id="txtEmail2" onFocus="validateEmailSignUpUser()"  onKeyUp="validateEmailSignUpUser()" placeholder="Email"><br>
