@@ -52,13 +52,18 @@ if (isset($_SESSION['userObject']))
 		 $tmp = array();
 		 $tmp["PKALBUMID"] =  doubleval($album["PKALBUMID"]);
 		 $tmp["FKUSERID"] = doubleval($album["FKUSERID"]);
+		 $tmp["FKPARENTID"] = ($album["FKPARENTID"] != NULL)? doubleval($album["FKPARENTID"]):0;
 		 $tmp["ALBUMNAME"] = $album["NAME"];
-		 $tmp["USERNAME"] = $album["USERNAME"];
+		 $tmp["ALBUMUSERNAME"] = $album["USERNAME"];
 		 $tmp["ADDRESS"] = $album["ADDRESS"];
 		 $tmp["PRIVACY"] = $album["PRIVACY"];
 		 $tmp["LAT1"] =  ($album["LATITUDE"] != NULL && $album["LATITUDE"] != "")?floatval($album["LATITUDE"]):0;
 		 $tmp["LONG1"] =  ($album["LONGITUDE"] != NULL && $album["LONGITUDE"] != "")?floatval($album["LONGITUDE"]):0;
 		 $tmp["RADIUS"] =  ($album["RADIOUS"] != NULL && $album["RADIOUS"] != "")?floatval($album["RADIOUS"]):0;
+		 $tmp["URLLARGE"] = $album["URLLARGE"];
+		 $tmp["URLMEDIUM"] = $album["URLMEDIUM"];
+		 $tmp["URLSMALL"] = $album["URLSMALL"];
+		 $tmp["URLTHUMB"] = $album["URLTHUMB"];
 		 $tmp["POSTDATE"] = $album["POSTDATE"];
 
 		 // push feed
