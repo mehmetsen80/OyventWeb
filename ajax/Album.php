@@ -44,8 +44,9 @@ if (isset($_SESSION['userObject']))
 
  function getAlbumList(){
 
+	 $autocompletetext = $_POST["autocompletetext"];
 	 $albumObj = new Album(NULL,NULL);
-	 $albumlist = $albumObj->getAlbumList("NAME asc",20);
+	 $albumlist = $albumObj->getAlbumList("NAME asc",20,$autocompletetext);
 
 	 $albums = array();
 	 foreach ($albumlist as $album) {

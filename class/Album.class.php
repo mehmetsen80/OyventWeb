@@ -59,16 +59,19 @@ class Album
 		}		
 	}
 	
-	public function getAlbumList($sortby=NULL,$limit=NULL)
+	public function getAlbumList($sortby=NULL,$limit=NULL,$autocompletetext=NULL)
    	{		
 		$sortbystr = "ORDER BY POSTDATE DESC";
 		if(isset($sortby)) $sortbystr = "ORDER BY ".$sortby;
 		
 		$limitstr = "";
 		if(isset($limit)) $limitstr = " LIMIT 0, $limit ";
+
+		$autocompletetextstr = "";
+		if(isset($autocompletetext)) $autocompletetextstr = "NAME LIKE '".$autocompletetext."%' AND";
 		
 		$query = "SELECT PKALBUMID,FKUSERID,FKPARENTID,NAME,USERNAME,ADDRESS,PRIVACY,LATITUDE, LONGITUDE, RADIOUS, URLLARGE, URLMEDIUM, URLSMALL, URLTHUMB, POSTDATE FROM TBLALBUM 
-		WHERE  PRIVACY='1' 	".$sortbystr." ".$limitstr;		
+		WHERE ".$autocompletetextstr."  PRIVACY='1' 	".$sortbystr." ".$limitstr;
 		
 		$result = executeQuery($query);		
 		return mysql_fetch_rowsarr($result);
