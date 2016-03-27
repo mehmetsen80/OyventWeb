@@ -67,7 +67,7 @@ class Album
 		$limitstr = "";
 		if(isset($limit)) $limitstr = " LIMIT 0, $limit ";
 		
-		$query = "SELECT PKALBUMID,FKUSERID,NAME,USERNAME,ADDRESS,PRIVACY,POSTDATE FROM TBLALBUM 
+		$query = "SELECT PKALBUMID,FKUSERID,NAME,USERNAME,ADDRESS,PRIVACY,LATITUDE, LONGITUDE, RADIOUS, POSTDATE FROM TBLALBUM 
 		WHERE  PRIVACY='1' 	".$sortbystr." ".$limitstr;		
 		
 		$result = executeQuery($query);		

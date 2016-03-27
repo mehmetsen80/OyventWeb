@@ -1,6 +1,7 @@
 <?php 
 
 require_once($_SERVER['DOCUMENT_ROOT']."/class/UserInfo.class.php");
+require_once($_SERVER['DOCUMENT_ROOT']."/class/Album.class.php");
 
 $processType= ($_GET['processType'])?$_GET['processType']:$_POST['processType'];
 
@@ -12,6 +13,9 @@ if (isset($_SESSION['userObject']))
 
  switch($processType)
  {
+	 case "GETALBUMLIST":
+		 getAlbumList();
+		 break;
  	case "CREATEALBUM":
 		createAlbum();
 		break;
@@ -36,6 +40,34 @@ if (isset($_SESSION['userObject']))
 	case "VOTEDOWN":
 		votedown();
 		break;
+ }
+
+ function getAlbumList(){
+
+	 $albumObj = new Album(NULL,NULL);
+	 $albumlist = $albumObj->getAlbumList("NAME asc",20);
+
+	 $albums = array();
+	 foreach ($albumlist as $album) {
+		 $tmp = array();
+		 $tmp["PKALBUMID"] =  doubleval($album["PKALBUMID"]);
+		 $tmp["FKUSERID"] = doubleval($album["FKUSERID"]);
+		 $tmp["ALBUMNAME"] = $album["NAME"];
+		 $tmp["USERNAME"] = $album["USERNAME"];
+		 $tmp["ADDRESS"] = $album["ADDRESS"];
+		 $tmp["PRIVACY"] = $album["PRIVACY"];
+		 $tmp["LAT1"] =  ($album["LATITUDE"] != NULL && $album["LATITUDE"] != "")?floatval($album["LATITUDE"]):0;
+		 $tmp["LONG1"] =  ($album["LONGITUDE"] != NULL && $album["LONGITUDE"] != "")?floatval($album["LONGITUDE"]):0;
+		 $tmp["RADIUS"] =  ($album["RADIOUS"] != NULL && $album["RADIOUS"] != "")?floatval($album["RADIOUS"]):0;
+		 $tmp["POSTDATE"] = $album["POSTDATE"];
+
+		 // push feed
+		 array_push($albums, $tmp);
+	 }
+
+	 $result["results"]= $albums;
+
+	 echo json_encode($result);
  }
  
  function createAlbum(){

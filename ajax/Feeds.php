@@ -15,10 +15,10 @@ const MAX_TAG_CONTENT_LENGTH = 100;
 
  switch($processType)
  {
-	case "GETPROFILEPHOTO": //mobile
+     case "GETPROFILEPHOTO": //mobile
 		getProfilePhoto();
 		break;
- 	case "GETFEEDLIST": //mobile
+     case "GETFEEDLIST": //mobile
 		getFeedList();
 		break;
 	case "DELETEFEED":
@@ -47,7 +47,9 @@ const MAX_TAG_CONTENT_LENGTH = 100;
 		break;
 		
  } 
- 
+
+
+
  function getProfilePhoto(){
  	//get userID
 	$userID = ($_GET["userID"])?$_GET["userID"]:$_POST["userID"];
