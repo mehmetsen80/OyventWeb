@@ -101,7 +101,7 @@ class Album
 		b.URLLARGE, b.URLMEDIUM, b.URLSMALL, b.URLTHUMB, 
 		( 3959 * acos( cos( radians(".$lat.") ) * cos( radians( b.LATITUDE ) ) * cos( radians( b.LONGITUDE ) - radians(".$lng.") ) + sin( radians(".$lat.") ) * sin( radians( b.LATITUDE ) ) ) ) AS DISTANCE 
 		FROM TBLALBUM b 
-		WHERE  b.PRIVACY='1' AND p.PRIVACY='1' 
+		WHERE  b.PRIVACY='1'  
 		ORDER BY DISTANCE, b.FKCATEGORYID ASC	
 		LIMIT ".$limit;
 
