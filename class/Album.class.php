@@ -95,6 +95,20 @@ class Album
 		return mysql_fetch_rowsarr($result);
 	}
 	
+	public function getAlbumListNearBy($limit, $lat, $lng){
+
+		$query = "SELECT b.PKALBUMID,b.FKUSERID,b.FKPARENTID,b.FKCATEGORYID,b.NAME,b.USERNAME,b.ADDRESS,b.PRIVACY,b.POSTDATE,b.RADIOUS, (SELECT COUNT(PKPHOTOID) FROM TBLPHOTO WHERE FKALBUMID = b.PKALBUMID) as 'PHOTOSIZE', 
+		b.URLLARGE, b.URLMEDIUM, b.URLSMALL, b.URLTHUMB, 
+		( 3959 * acos( cos( radians(".$lat.") ) * cos( radians( b.LATITUDE ) ) * cos( radians( b.LONGITUDE ) - radians(".$lng.") ) + sin( radians(".$lat.") ) * sin( radians( b.LATITUDE ) ) ) ) AS DISTANCE 
+		FROM TBLALBUM b 
+		WHERE  b.PRIVACY='1' AND p.PRIVACY='1' 
+		ORDER BY DISTANCE, b.FKCATEGORYID ASC	
+		LIMIT ".$limit;
+
+		$result = executeQuery($query);
+		return mysql_fetch_rowsarr($result);
+	}
+	
 	public function getAllAlbumListNearBy($currentPage,$lat,$lng,$pkAlbumID)
    	{		
 		//To search by kilometers instead of miles, replace 3959 with 6371. 

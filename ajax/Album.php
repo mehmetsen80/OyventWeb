@@ -13,9 +13,12 @@ if (isset($_SESSION['userObject']))
 
  switch($processType)
  {
-	 case "GETALBUMLIST":
+	 case "GETALBUMLIST"://get all default album list, mobile
 		 getAlbumList();
 		 break;
+	 case "GETALBUMLISTNEARBY": //mobile
+		 getAlbumListNearBy();
+	 	break;
  	case "CREATEALBUM":
 		createAlbum();
 		break;
@@ -75,7 +78,51 @@ if (isset($_SESSION['userObject']))
 
 	 echo json_encode($result);
  }
- 
+
+function getAlbumListNearBy(){
+
+	require_once($_SERVER['DOCUMENT_ROOT']."/class/Album.class.php");
+
+	$limit = ($_GET['limit'])?$_GET['limit']:$_POST['limit'];
+	$latitude = ($_GET["latitude"])?$_GET["latitude"]:$_POST["latitude"];
+	$longitude = ($_GET["longitude"])?$_GET["longitude"]:$_POST["longitude"];
+
+	$albumObj = new Album();
+	$albumResult = $albumObj->getAlbumListNearBy( $limit, $latitude, $longitude);
+
+	$albums = array();
+	foreach ($albumResult as $album) {
+		$tmp = array();
+
+		$tmp["PKALBUMID"] = doubleval($album["PKALBUMID"]);
+		$tmp["FKUSERID"] = doubleval($album["FKUSERID"]);
+		$tmp["FKPARENTID"] = ($album["FKPARENTID"] != NULL)? doubleval($album["FKPARENTID"]):0;
+		$tmp["FKCATEGORYID"] = ($album["FKCATEGORYID"] != NULL)? doubleval($album["FKCATEGORYID"]):0;
+		$tmp["ALBUMNAME"] = $album["NAME"];
+		$tmp["ALBUMUSERNAME"] = $album["USERNAME"];
+		$tmp["PARENTNAME"] = "";
+		$tmp["ADDRESS"] = $album["ADDRESS"];
+		$tmp["LATITUDE"] =  ($album["LATITUDE"] != NULL && $album["LATITUDE"] != "")?floatval($album["LATITUDE"]):0;
+		$tmp["LONGITUDE"] =  ($album["LONGITUDE"] != NULL && $album["LONGITUDE"] != "")?floatval($album["LONGITUDE"]):0;
+		$tmp["POSTDATE"] = $album["POSTDATE"];
+		$tmp["RADIUS"] = ($album["RADIOUS"] != NULL && $album["RADIOUS"] != "")?floatval($album["RADIOUS"]):0;
+		$tmp["DISTANCE"] = ($album["DISTANCE"] != NULL)? doubleval($album["DISTANCE"]):0;
+		$tmp["PHOTOSIZE"] = intval($album["PHOTOSIZE"]);
+		$tmp["URLLARGE"] = $album["URLLARGE"];
+		$tmp["URLMEDIUM"] = $album["URLMEDIUM"];
+		$tmp["URLSMALL"] = $album["URLSMALL"];
+		$tmp["URLTHUMB"] = $album["URLTHUMB"];
+		$tmp["TOTALPHOTOSIZE"] = 0;
+
+		// push album
+		array_push($albums, $tmp);
+	}
+
+	$result["results"]= $albums;
+
+	echo json_encode($result);
+}
+
  function createAlbum(){
 
 	require_once($_SERVER['DOCUMENT_ROOT']."/class/Album.class.php");
