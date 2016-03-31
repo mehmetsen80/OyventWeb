@@ -100,7 +100,7 @@ function getAlbumListNearBy(){
 		$tmp["FKCATEGORYID"] = ($album["FKCATEGORYID"] != NULL)? doubleval($album["FKCATEGORYID"]):0;
 		$tmp["ALBUMNAME"] = $album["NAME"];
 		$tmp["ALBUMUSERNAME"] = $album["USERNAME"];
-		$tmp["PARENTNAME"] = "";
+		$tmp["PARENTNAME"] = $album["PARENTNAME"];
 		$tmp["ADDRESS"] = $album["ADDRESS"];
 		$tmp["LATITUDE"] =  ($album["LATITUDE"] != NULL && $album["LATITUDE"] != "")?floatval($album["LATITUDE"]):0;
 		$tmp["LONGITUDE"] =  ($album["LONGITUDE"] != NULL && $album["LONGITUDE"] != "")?floatval($album["LONGITUDE"]):0;

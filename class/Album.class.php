@@ -97,11 +97,11 @@ class Album
 	
 	public function getAlbumListNearBy($limit, $lat, $lng){
 
-		$query = "SELECT b.PKALBUMID,b.FKUSERID,b.FKPARENTID,b.FKCATEGORYID,b.NAME,b.USERNAME,b.ADDRESS,b.PRIVACY,b.POSTDATE,b.RADIOUS, (SELECT COUNT(PKPHOTOID) FROM TBLPHOTO WHERE FKALBUMID = b.PKALBUMID) as 'PHOTOSIZE', 
+		$query = "SELECT b.PKALBUMID,b.FKUSERID,b.FKPARENTID,b.FKCATEGORYID,b.LATITUDE, b.LONGITUDE, b.NAME,b.USERNAME,b.ADDRESS,b.PRIVACY,b.POSTDATE,b.RADIOUS, p.NAME as 'PARENTNAME', (SELECT COUNT(PKPHOTOID) FROM TBLPHOTO WHERE FKALBUMID = b.PKALBUMID) as 'PHOTOSIZE', 
 		b.URLLARGE, b.URLMEDIUM, b.URLSMALL, b.URLTHUMB, 
 		( 3959 * acos( cos( radians(".$lat.") ) * cos( radians( b.LATITUDE ) ) * cos( radians( b.LONGITUDE ) - radians(".$lng.") ) + sin( radians(".$lat.") ) * sin( radians( b.LATITUDE ) ) ) ) AS DISTANCE 
-		FROM TBLALBUM b 
-		WHERE  b.PRIVACY='1'  
+		FROM TBLALBUM b LEFT OUTER JOIN TBLALBUM p ON b.FKPARENTID = p.PKALBUMID
+		WHERE  b.PRIVACY='1'  AND p.PRIVACY = '1' 
 		ORDER BY DISTANCE, b.FKCATEGORYID ASC	
 		LIMIT ".$limit;
 
@@ -127,7 +127,8 @@ class Album
 		
 		$query = "SELECT b.PKALBUMID,b.FKUSERID,b.FKPARENTID,b.FKCATEGORYID,b.NAME,b.USERNAME,b.ADDRESS,b.PRIVACY,b.POSTDATE,b.RADIOUS, p.NAME as 'PARENTNAME', (SELECT COUNT(PKPHOTOID) FROM TBLPHOTO WHERE FKALBUMID = b.PKALBUMID) as 'PHOTOSIZE', 
 		b.URLLARGE, b.URLMEDIUM, b.URLSMALL, b.URLTHUMB, $totalPhotoSize AS 'TOTALPHOTOSIZE' ,
-		( 3959 * acos( cos( radians(".$lat.") ) * cos( radians( b.LATITUDE ) ) * cos( radians( b.LONGITUDE ) - radians(".$lng.") ) + sin( radians(".$lat.") ) * sin( radians( b.LATITUDE ) ) ) ) AS DISTANCE FROM TBLALBUM b LEFT OUTER JOIN TBLALBUM p ON b.FKPARENTID = p.PKALBUMID 
+		( 3959 * acos( cos( radians(".$lat.") ) * cos( radians( b.LATITUDE ) ) * cos( radians( b.LONGITUDE ) - radians(".$lng.") ) + sin( radians(".$lat.") ) * sin( radians( b.LATITUDE ) ) ) ) AS DISTANCE 
+		FROM TBLALBUM b LEFT OUTER JOIN TBLALBUM p ON b.FKPARENTID = p.PKALBUMID 
 		WHERE   b.PRIVACY='1' AND p.PRIVACY='1' ".$whereClause4PK."  
 		ORDER BY DISTANCE,b.FKCATEGORYID ASC	
 		LIMIT ".$currentPage*self::LIST_INTERVAL.",".self::LIST_INTERVAL; 
