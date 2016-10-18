@@ -463,7 +463,7 @@ class Album
 						$query = "DELETE FROM TBLOYS WHERE FKPHOTOID='".$pkPhotoID."'";
 						$delete = executeQueryForTrans($query);
 						
-						$query = "DELETE FROM TBLCOMMENT WHERE FKPHOTOID='".$pkPhotoID."'";
+						$query = "DELETE FROM TBLCOMMENT WHERE FKPHOTOID='".moo."'";
 						$delete = executeQueryForTrans($query);
 						
 						commitTrans(); // transaction is committed
