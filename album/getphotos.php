@@ -16,9 +16,9 @@
 	foreach($photos_array as $key => $value)
 	{
 		$query = "SELECT URLLARGE FROM TBLPHOTO WHERE PKPHOTOID='".$value."' ";
-		$result = executeQuery($query);	
-			
-		if(mysql_num_rows($result) > 0)
+        $result = executeQuery($query);
+
+        if(mysql_num_rows($result) > 0)
 		{
 			while($row = mysql_fetch_array($result)){			
 				$files[] = $row["URLLARGE"];
